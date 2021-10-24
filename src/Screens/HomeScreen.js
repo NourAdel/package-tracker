@@ -1,5 +1,11 @@
+import SearchBox from "../Components/SearchBox";
+
 const HomeScreen = () => {
-  return <div>Home Screen</div>;
+  return (
+    <div>
+      <SearchBox />
+    </div>
+  );
 };
 
 export default HomeScreen;

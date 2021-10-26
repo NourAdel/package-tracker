@@ -9,7 +9,7 @@ export default makeStyles(() => ({
     justifyContent: "center",
     flexDirection: "column",
     backgroundColor: "#fafafa",
-    margin: "auto",
+    margin: 'auto',
     padding: 20,
     boxSizing: "border-box",
     "@media (max-width: 500px)": {
@@ -78,6 +78,7 @@ export default makeStyles(() => ({
     display: "flex",
     marginLeft: (props) => (props.IS_RTL ? 0 : 10),
     marginRight: (props) => (props.IS_RTL ? 10 : 0),
+    cursor:"pointer"
   },
   searchIcon: {
     transform: (props) => (props.IS_RTL ? "scaleX(-1)" : ""),

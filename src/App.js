@@ -5,7 +5,7 @@ function App() {
   return (
     <PackageProvider>
       <AppStateProvider>
-        <HomeScreen />
+        <HomeScreen/>
       </AppStateProvider>
     </PackageProvider>
   );

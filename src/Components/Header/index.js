@@ -1,5 +1,4 @@
 import makeStyles from "./Style";
-import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import { AppStateContext } from "../../Context/AppStateContext";
 import { ReactComponent as LogoAr } from "../../assets/Logo.svg";
@@ -10,7 +9,6 @@ const SearchBox = () => {
   const { IS_RTL, setLanguage } = useContext(AppStateContext);
   const classes = makeStyles({ IS_RTL });
 
-  const { t } = useTranslation();
   return (
     <div className={classes.container}>
       {i18n.language == "en" ? (

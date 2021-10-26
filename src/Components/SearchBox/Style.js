@@ -13,7 +13,7 @@ export default makeStyles(() => ({
     padding: 20,
     boxSizing: "border-box",
     "@media (max-width: 500px)": {
-      width: window.innerWidth,
+      width: '100%',
       position: "absolute",
       bottom: 0,
     },
@@ -66,7 +66,6 @@ export default makeStyles(() => ({
     flexDirection: (props) => (props.IS_RTL ? "row-reverse" : "row"),
     justifyContent: "flex-start",
     alignItems: "center",
-    backgroundColor: "whitesmoke",
     marginBottom: 20,
   },
   searchIconContainer: {

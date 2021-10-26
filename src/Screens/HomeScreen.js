@@ -1,8 +1,9 @@
-import SearchBox from "../Components/SearchBox";
-
+import SearchBox from "../Components/SearchBox/index";
+import Header from '../Components/Header'
 const HomeScreen = () => {
   return (
     <div>
+      <Header/>
       <SearchBox />
     </div>
   );

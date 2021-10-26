@@ -1,13 +1,12 @@
-import makeStyles from "../Styles/searchComponentStyles";
+import makeStyles from "./Style";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
-import { AppStateContext } from "../Context/AppStateContext";
-import i18n from "../Localization";
-import { PackageContext } from "../Context/PackageContext";
+import { AppStateContext } from "../../Context/AppStateContext";
+import { PackageContext } from "../../Context/PackageContext";
 const SearchBox = () => {
-  const { IS_RTL, setLanguage } = useContext(AppStateContext);
-  const {searchInput, setInput}= useContext(PackageContext)
+  const { IS_RTL } = useContext(AppStateContext);
+  const {searchInput, setInput, getPackageData}= useContext(PackageContext)
   const classes = makeStyles({ IS_RTL });
 
   const { t } = useTranslation();
@@ -19,14 +18,14 @@ const SearchBox = () => {
       <div className={classes.inputContainer}>
         <input
           className={classes.input}
-          placeHolder={t("trackPackagePlaceholder")}
+          placeholder={t("trackPackagePlaceholder")}
           type={'number'}
           value={searchInput}
           onChange={e=>setInput(e.target.value)}
         />
         <div
           className={classes.searchIconContainer}
-          onClick={() => setLanguage(i18n.language === "ar" ? "en" : "ar")}
+          onClick={()=>getPackageData()}
         >
           <SearchRoundedIcon
             className={classes.searchIcon}

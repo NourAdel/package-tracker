@@ -99,7 +99,10 @@ const TableAssembler = () => {
                           IS_RTL={IS_RTL}
                           align={IS_RTL ? "right" : "left"}
                         >
-                         <h5 style={{color:"red", fontSize:12,}}> {t(`reasonDescription`)}</h5> 
+                          <h5 style={{ color: "red", fontSize: 12 }}>
+                            {" "}
+                            {t(`reasonDescription`)}
+                          </h5>
                         </StyledTableCell>
                       </TableRow>
                     )}
@@ -154,7 +157,7 @@ const TableAssembler = () => {
         </TableContainer>
       );
     }
-    return null
+    return null;
   };
   const renderRows = () => {
     return rows.map((row, index) => {
@@ -170,7 +173,7 @@ const TableAssembler = () => {
             {row.time}
           </StyledTableCell>
           <StyledTableCell IS_RTL={IS_RTL} align="center">
-            <div style={{ height: 40 }}>
+            <div>
               <h5>{t(`${row.activity}`)}</h5>
               {row.reason && (
                 <h5 style={{ color: "red" }}>{t(`reasonDescription`)}</h5>

@@ -2,19 +2,20 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles(() => ({
   container: {
-    width: 350,
+    width: (props) => (props.WITH_DATA ? "35%" : 350),
+    maxWidth: 350,
     height: 170,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     backgroundColor: "#fafafa",
-    margin: 'auto',
+    margin: "auto",
     padding: 20,
     boxSizing: "border-box",
-    "@media (max-width: 500px)": {
-      width: '100%',
-      position: "absolute",
-      bottom: 0,
+    "@media (max-width: 730px)": {
+      width: (props) => (props.WITH_DATA ? "100%" : 350),
+      position: (props) => (props.WITH_DATA ? "absolute" : "unset"),
+      bottom: (props) => (props.WITH_DATA ? 0 : "unset"),
     },
   },
   title: {
@@ -37,9 +38,9 @@ export default makeStyles(() => ({
     paddingLeft: 10,
     paddingRight: 10,
     width: "80%",
-    MozAppearance:"none",
-    fontSize:18,
-    color:"#979797",
+    MozAppearance: "none",
+    fontSize: 18,
+    color: "#979797",
     textAlign: (props) => (props.IS_RTL ? "right" : "left"),
     "&:focus": {
       borderColor: "red",
@@ -54,11 +55,9 @@ export default makeStyles(() => ({
     "&::placeHolder": {
       color: "#979797A",
     },
-    "&::-webkit-inner-spin-button":{
+    "&::-webkit-inner-spin-button": {
       WebkitAppearance: "none",
-
     },
- 
   },
   inputContainer: {
     display: "flex",
@@ -77,7 +76,7 @@ export default makeStyles(() => ({
     display: "flex",
     marginLeft: (props) => (props.IS_RTL ? 0 : 10),
     marginRight: (props) => (props.IS_RTL ? 10 : 0),
-    cursor:"pointer"
+    cursor: "pointer",
   },
   searchIcon: {
     transform: (props) => (props.IS_RTL ? "scaleX(-1)" : ""),

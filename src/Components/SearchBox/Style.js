@@ -7,7 +7,6 @@ export default makeStyles(() => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    flexDirection: "column",
     backgroundColor: "#fafafa",
     margin: 'auto',
     padding: 20,

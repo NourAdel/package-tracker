@@ -8,11 +8,14 @@ export const AppStateProvider = ({ children }) => {
   const [IS_RTL, setRTL] = useState(false);
   const isMobileView = useMediaQuery('(max-width:500px)');
 
+
   const setLanguage = (language) => {
     setAppLanguage(language);
     setRTL(language === "ar");
     i18n.changeLanguage(language);
   };
+
+  
 
   return (
     <AppStateContext.Provider

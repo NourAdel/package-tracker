@@ -12,7 +12,6 @@ export default makeStyles(() => ({
     boxSizing: "border-box",
     borderBottomWidth: 0.5,
     borderWidth: 0,
-    borderBottomWidth: 0.5,
     borderColor: "#ff0000",
     borderStyle: "solid",
     flexDirection: (props) => (props.IS_RTL ? "row-reverse" : "row"),

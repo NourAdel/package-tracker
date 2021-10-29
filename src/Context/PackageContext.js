@@ -3,6 +3,7 @@ import React, { createContext, useState } from "react";
 export const PackageContext = createContext();
 
 export const PackageProvider = ({ children }) => {
+
   const [searchInput, setSearchInput] = useState("");
   const [packageData, setPackageData] = useState(null);
   const setInput = (input) => {

@@ -14,8 +14,12 @@ export default makeStyles(() => ({
     boxSizing: "border-box",
     "@media (max-width: 730px)": {
       width: (props) => (props.WITH_DATA ? "100%" : 350),
+      maxWidth: "unset",
       position: (props) => (props.WITH_DATA ? "absolute" : "unset"),
-      bottom: (props) => (props.WITH_DATA ? 0 : "unset"),
+      bottom:0
+      ,
+      zIndex:3
+      //  (props) => (props.WITH_DATA ? 0 : "unset"),
     },
   },
   title: {

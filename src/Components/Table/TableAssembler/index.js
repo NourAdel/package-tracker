@@ -36,7 +36,6 @@ const TableAssembler = () => {
           "/" +
           timestamp.getUTCFullYear();
         const time = timestamp.getUTCHours() + ":" + timestamp.getUTCMinutes();
-        console.log(event.reason ?? "none");
 
         return createData(
           event.hub ?? "-",
@@ -55,7 +54,11 @@ const TableAssembler = () => {
       const { TransitEvents } = packageData;
       return (
         <TableContainer
-          sx={{ height: 400, transform: IS_RTL ? "ScaleX(-1)" : "" }}
+          sx={{
+            height: 400,
+            transform: IS_RTL ? "ScaleX(-1)" : "",
+            marginBottom: 25,
+          }}
         >
           <Table aria-label="customized table" stickyHeader>
             {TransitEvents.map((event) => {

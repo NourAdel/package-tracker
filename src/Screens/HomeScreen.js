@@ -5,21 +5,19 @@ import Header from "../Components/Header";
 import Table from "../Components/Table/index";
 import { useContext } from "react";
 import { AppStateContext } from "../Context/AppStateContext";
+import CustomizedSteppers from "../Components/ProgressBar";
 
 const HomeScreen = () => {
   const { IS_RTL } = useContext(AppStateContext);
   const classes = makeStyles({ IS_RTL });
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        height: window.innerHeight,
-      }}
-    >
+    <div className={classes.container}>
       <Header />
+      <CustomizedSteppers />
+
       <div className={classes.bodyContainer}>
         <Table />
+
         <SearchBox />
       </div>
     </div>

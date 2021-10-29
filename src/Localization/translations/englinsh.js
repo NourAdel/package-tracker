@@ -6,8 +6,12 @@ const EN = {
   date: "Date",
   time: "Time",
   branch: "Branch",
-  reason:"Reason",
-  reasonDescription:" Customer requested to postpone delivery",  
+  reason: "Reason",
+  reasonDescription: " Customer requested to postpone delivery",
+  packageNumber: "Package No",
+  lastUpdate: "Last update",
+  shipper: "Shipper",
+  promisedDate: "Promised Delivery Date",
 
   //Activities
 

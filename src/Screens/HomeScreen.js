@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { AppStateContext } from "../Context/AppStateContext";
 import CustomizedSteppers from "../Components/ProgressBar";
 import ReportProblem from '../Components/ReportProblem'
+import Address from "../Components/Address";
 
 const HomeScreen = () => {
   const { IS_RTL } = useContext(AppStateContext);
@@ -22,7 +23,8 @@ const HomeScreen = () => {
 
         <SearchBox />
       </div> */}
-      <ReportProblem/>
+      {/* <ReportProblem/> */}
+      <Address/>
     </div>
   );
 };

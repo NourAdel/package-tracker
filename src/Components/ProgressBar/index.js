@@ -79,7 +79,6 @@ const ProgressBar = () => {
         return 4;
       default:
         return 2;
-        break;
     }
   };
 

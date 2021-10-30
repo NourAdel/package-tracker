@@ -12,8 +12,11 @@ const AR = {
   lastUpdate: "آخر تحديث",
   shipper: "التاجر",
   promisedDate: "موعد التسليم خلال",
-  reportProblemTitle:"هل يوجد مشكلة في شحنتك؟",
-  reportProblemBTN:"إبلاغ عن مشكلة",
+  reportProblemTitle: "هل يوجد مشكلة في شحنتك؟",
+  reportProblemBTN: "إبلاغ عن مشكلة",
+  address:
+    "إمبابة شارع طلعت حرب مدينةالعمال بجوارالبرنس منرل ١٧ بلوك ٣٣,الفاهرة.",
+
   //Activities
 
   TICKET_CREATED: "تم انشاء الشحنة",

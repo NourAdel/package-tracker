@@ -12,7 +12,7 @@ export default makeStyles(() => ({
     boxSizing: "border-box",
     borderBottomWidth: 0.5,
     borderWidth: 0,
-    borderColor: "#ff0000",
+    borderColor: "#e3e3e3",
     borderStyle: "solid",
     flexDirection: (props) => (props.IS_RTL ? "row-reverse" : "row"),
   },
@@ -24,6 +24,7 @@ export default makeStyles(() => ({
     fontSize: 20,
     fontWeight: 800,
     color: "#ff0000",
-    cursor:'pointer'
+    cursor:'pointer',
+    fontFamily:"Cairo bold"
   },
 }));

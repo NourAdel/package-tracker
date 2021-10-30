@@ -12,6 +12,8 @@ const EN = {
   lastUpdate: "Last update",
   shipper: "Shipper",
   promisedDate: "Promised Delivery Date",
+  reportProblemTitle:"Having a trouble with your package?",
+  reportProblemBTN:"Report a problem",
 
   //Activities
 

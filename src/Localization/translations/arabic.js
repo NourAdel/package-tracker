@@ -12,6 +12,8 @@ const AR = {
   lastUpdate: "آخر تحديث",
   shipper: "التاجر",
   promisedDate: "موعد التسليم خلال",
+  reportProblemTitle:"هل يوجد مشكلة في شحنتك؟",
+  reportProblemBTN:"إبلاغ عن مشكلة",
   //Activities
 
   TICKET_CREATED: "تم انشاء الشحنة",
@@ -32,6 +34,5 @@ const AR = {
   Cairo: "مقر الفرز في القاهرة",
   Alexandria: "الإسكندرية",
   Tanta: "طنطا",
-  // تأجيل - العميل طلب التاجيل ليوم اخر
 };
 export default AR;

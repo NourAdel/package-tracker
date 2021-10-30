@@ -21,6 +21,7 @@ code {
 @font-face {
   font-family:'Cairo bold' ;
   src: local('Cairo'), url('./assets/fonts/Cairo-Bold.ttf');
+  font-weight: 800px;
 }
 
 @font-face {

@@ -36,8 +36,14 @@ const ProgressBar = () => {
   };
 
   const getDateString = (promisedDate) => {
-    const date = new Date(promisedDate);
-    return date.toLocaleDateString();
+    const date= new Date (promisedDate)
+    const stringDate =
+    date.getUTCDate() +
+    "/" +
+    date.getUTCMonth() +
+    "/" +
+    date.getUTCFullYear();
+  return stringDate;
   };
 
   return (

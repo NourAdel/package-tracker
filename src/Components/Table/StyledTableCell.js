@@ -10,10 +10,13 @@ export const StyledTableCell = styled((props) => <TableCell {...props} />)(
       transform: IS_RTL ? "scaleX(-1)" : "",
       fontSize: 16,
       fontWeight: 600,
+      fontFamily:"Cairo regural"
     },
     [`&.${tableCellClasses.body}`]: {
       fontSize: 14,
       transform: IS_RTL ? "scaleX(-1)" : "",
+      fontFamily:"Cairo regural"
+
     },
   })
 );

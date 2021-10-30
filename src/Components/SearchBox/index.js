@@ -22,6 +22,12 @@ const SearchBox = () => {
           type={"number"}
           value={searchInput}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => {
+            debugger;
+            if (e.code === "Enter" || e.code === "NumpadEnter") {
+              getPackageData();
+            }
+          }}
         />
         <div
           className={classes.searchIconContainer}

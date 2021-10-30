@@ -17,25 +17,24 @@ const HomeScreen = () => {
   return (
     <div className={classes.container}>
       <Header />
-
       <CustomizedSteppers />
       {isMobileView && <Address />}
-
       <div className={classes.bodyContainer}>
         <Table />
 
         <div className={classes.addressContainer}>
-          {!isMobileView && (
+          {!isMobileView ? (
             <>
               <Address />
               <ReportProblem />
+              <SearchBox />
             </>
-          )}
-
-          {!packageData && <SearchBox />}
+          ) : isMobileView && !packageData ? (
+            <SearchBox />
+          ) : null}
         </div>
       </div>
-      <Footer />
+      Ï{isMobileView && <Footer />}
     </div>
   );
 };

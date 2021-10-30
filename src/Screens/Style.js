@@ -14,7 +14,8 @@ export default makeStyles(() => ({
     marginTop: 20,
     marginBottom: 20,
     alignSelf: "center",
-    "@media (max-width: 730px)": {
+    justifyContent:"center",
+        "@media (max-width: 730px)": {
       display: "flex",
       flexDirection: "column",
       padding: 0,
@@ -31,6 +32,12 @@ export default makeStyles(() => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+
     marginTop: 70,
+    "@media (max-width: 900px) and(min-width: 730px) ": {
+      justifyContent:"center",
+
+
+    },
   },
 }));

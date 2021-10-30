@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
 
 export default makeStyles(() => ({
+  container:{width: "100%", textAlign: props=>props.IS_RTL ? "right" : "left"},
   tableContainer: {
     transform: (props) => (props.IS_RTL ? "scaleX(-1)" : ""),
     minWidth: 450,

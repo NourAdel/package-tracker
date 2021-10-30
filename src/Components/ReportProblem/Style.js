@@ -15,6 +15,7 @@ export default makeStyles(() => ({
     flexDirection: (props) => (props.IS_RTL ? "row" : "row-reverse"),
     boxSizing: "border-box",
     marginTop:10,
+    marginBottom:10,
     "@media (max-width: 730px)": {
       width:350
 

@@ -3,7 +3,6 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles(() => ({
   footer: {
     width: "100%",
-    height: 200,
     display: "flex",
     justifyContent: (props) => (props.IS_RTL ? "flex-end" : "flex-start"),
     alignItems: "center",
@@ -14,11 +13,7 @@ export default makeStyles(() => ({
     borderTopWidth: 0.5,
     borderColor: "#ff0000",
     borderStyle: "solid",
-     "@media (max-width: 730px)": {
-      flexDirection: 'column',
-      height:"unset",
-      marginBottom:5
-
-     }
+    flexDirection: "column",
+    marginBottom: 5,
   },
 }));

@@ -5,12 +5,14 @@ export const PackageContext = createContext();
 export const PackageProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
   const [packageData, setPackageData] = useState(null);
+  const [loading, setLoading]= useState(false)
   const setInput = (input) => {
     if (input.length > 7) return;
     setSearchInput(input);
   };
   const getPackageData = () => {
     if (searchInput.length < 7) return;
+    setLoading(true)
     axios
       .get(`https://tracking.bosta.co/shipments/track/${searchInput}`)
       .then((res) => {
@@ -19,7 +21,11 @@ export const PackageProvider = ({ children }) => {
       })
       .catch((err) => {
         console.log(err);
-      });
+      })
+      .finally(()=>{
+        setLoading(false)
+      })
+      
   };
   const reset = () => {
     setInput("");
@@ -28,7 +34,7 @@ export const PackageProvider = ({ children }) => {
 
   return (
     <PackageContext.Provider
-      value={{ searchInput, setInput, getPackageData, packageData, reset }}
+      value={{ searchInput, setInput, getPackageData, packageData, reset, loading, setLoading }}
     >
       {children}
     </PackageContext.Provider>

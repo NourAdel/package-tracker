@@ -10,9 +10,11 @@ import ReportProblem from "../Components/ReportProblem";
 import Address from "../Components/Address";
 import { PackageContext } from "../Context/PackageContext";
 import Footer from "../Components/Footer";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 const HomeScreen = () => {
   const { IS_RTL, isMobileView } = useContext(AppStateContext);
-  const { packageData } = useContext(PackageContext);
+  const { packageData, loading, setLoading } = useContext(PackageContext);
   const classes = makeStyles({ IS_RTL });
   return (
     <div className={classes.container}>
@@ -35,6 +37,13 @@ const HomeScreen = () => {
         </div>
       </div>
       Ï{isMobileView && <Footer />}
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={loading}
+        onClick={() => setLoading(false)}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </div>
   );
 };

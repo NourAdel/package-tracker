@@ -5,14 +5,11 @@ export default makeStyles(() => ({
     width: "80%",
     minWidth: 220,
     "@media (max-width: 730px)": {
-      paddingLeft:20,
-      paddingRight:20,
-      width:'100%',
-      boxSizing:"border-box"
-
-
-     }
- 
+      paddingLeft: 20,
+      paddingRight: 20,
+      width: "100%",
+      boxSizing: "border-box",
+    },
   },
   innerContainer: {
     width: "100%",

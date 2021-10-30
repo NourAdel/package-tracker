@@ -19,13 +19,13 @@ export default makeStyles(() => ({
   logo: {
     width: 88,
     height: 40,
-    cursor:"pointer"
+    cursor: "pointer",
   },
   language: {
     fontSize: 20,
     fontWeight: 800,
     color: "#ff0000",
-    cursor:'pointer',
-    fontFamily:"Cairo bold"
+    cursor: "pointer",
+    fontFamily: "Cairo bold",
   },
 }));

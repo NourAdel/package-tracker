@@ -14,12 +14,11 @@ export default makeStyles(() => ({
     padding: 10,
     flexDirection: (props) => (props.IS_RTL ? "row" : "row-reverse"),
     boxSizing: "border-box",
-    marginTop:10,
-    marginBottom:10,
+    marginTop: 10,
+    marginBottom: 10,
     "@media (max-width: 730px)": {
-      width:350
-
-     }
+      width: 350,
+    },
   },
   innerContainer: {
     display: "flex",
@@ -60,5 +59,5 @@ export default makeStyles(() => ({
 export const ContactSupportIconStyle = {
   color: "#ff0000",
   fontSize: 70,
-  marginTop:2
+  marginTop: 2,
 };

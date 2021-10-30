@@ -7,19 +7,9 @@ export default makeStyles(() => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: props=>props.WITH_DATA? "transparent":"#fafafa",
-    // margin: "auto",
+    backgroundColor: (props) => (props.WITH_DATA ? "transparent" : "#fafafa"),
     padding: 20,
     boxSizing: "border-box",
-    // "@media (max-width: 730px)": {
-    //   width: (props) => (props.WITH_DATA ? "100%" : 350),
-    //   maxWidth: "unset",
-    //   position: (props) => (props.WITH_DATA ? "absolute" : "unset"),
-    //   bottom:0
-    //   ,
-    //   zIndex:3
-    //   //  (props) => (props.WITH_DATA ? 0 : "unset"),
-    // },
   },
   title: {
     textAlign: (props) => (props.IS_RTL ? "right" : "left"),

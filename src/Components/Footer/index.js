@@ -15,7 +15,7 @@ const Footer = () => {
     packageData && (
       <div className={classes.footer}>
         <SearchBox />
-         <ReportProblem/>
+        <ReportProblem />
       </div>
     )
   );

@@ -44,10 +44,9 @@ export default makeStyles(() => ({
     fontWeight: 600,
     fontFamily: "Cairo bold",
   },
-  stepLabel:{
+  stepLabel: {
     width: 60,
     textAlign: "center",
     padding: 5,
-  }
+  },
 }));
-

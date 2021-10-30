@@ -1,9 +1,11 @@
-import makeStyles from "./Style";
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
+import makeStyles from "./Style";
 import { AppStateContext } from "../../Context/AppStateContext";
 import { PackageContext } from "../../Context/PackageContext";
+
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+
 const SearchBox = () => {
   const { IS_RTL } = useContext(AppStateContext);
   const { searchInput, setInput, getPackageData, packageData } =

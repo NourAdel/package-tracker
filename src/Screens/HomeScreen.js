@@ -1,22 +1,24 @@
+import { useContext } from "react";
 import makeStyles from "./Style";
+import { useTranslation } from "react-i18next";
+import { AppStateContext } from "../Context/AppStateContext";
+import { PackageContext } from "../Context/PackageContext";
 
 import SearchBox from "../Components/SearchBox/index";
 import Header from "../Components/Header";
 import Table from "../Components/Table/index";
-import { useContext } from "react";
-import { AppStateContext } from "../Context/AppStateContext";
 import CustomizedSteppers from "../Components/ProgressBar";
 import ReportProblem from "../Components/ReportProblem";
 import Address from "../Components/Address";
-import { PackageContext } from "../Context/PackageContext";
 import Footer from "../Components/Footer";
+
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 import Snackbar from "@mui/material/Snackbar";
-import { useTranslation } from "react-i18next";
 
 const HomeScreen = () => {
   const { IS_RTL, isMobileView } = useContext(AppStateContext);
+  const classes = makeStyles({ IS_RTL });
   const {
     packageData,
     loading,
@@ -26,7 +28,6 @@ const HomeScreen = () => {
     errorMessage,
   } = useContext(PackageContext);
   const { t } = useTranslation();
-  const classes = makeStyles({ IS_RTL });
 
   return (
     <div className={classes.container}>
@@ -48,7 +49,7 @@ const HomeScreen = () => {
           ) : null}
         </div>
       </div>
-      Ï{isMobileView && <Footer />}
+      {isMobileView && <Footer />}
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={loading}

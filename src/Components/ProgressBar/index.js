@@ -1,15 +1,14 @@
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
+import { AppStateContext } from "../../Context/AppStateContext";
+import { PackageContext } from "../../Context/PackageContext";
 import makeStyles from "./Style";
+import { ColorlibStepIcon } from "./ColoribStepIconRoot";
+
 import Stack from "@mui/material/Stack";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import { ColorlibStepIcon } from "./ColoribStepIconRoot";
-
-
-import { useTranslation } from "react-i18next";
-import { AppStateContext } from "../../Context/AppStateContext";
-import { PackageContext } from "../../Context/PackageContext";
 
 const ProgressBar = () => {
   const { t } = useTranslation();

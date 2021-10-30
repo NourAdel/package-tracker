@@ -23,7 +23,6 @@ const SearchBox = () => {
           value={searchInput}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
-            debugger;
             if (e.code === "Enter" || e.code === "NumpadEnter") {
               getPackageData();
             }

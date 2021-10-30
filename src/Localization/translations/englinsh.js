@@ -18,6 +18,8 @@ const EN = {
   address:
     "Imbaba Talaat Harb ST Madenet Al Omal Next to Al Prince House No. 17 Block No 33, Cairo.",
     packageDetails:"Package Details",
+    invalid:"Invalin package number",
+    lessThanSeven:"Package number must be 7 digits",
   //Activities
 
   TICKET_CREATED: "TICKET CREATED",

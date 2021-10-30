@@ -12,10 +12,22 @@ import { PackageContext } from "../Context/PackageContext";
 import Footer from "../Components/Footer";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
+import Snackbar from "@mui/material/Snackbar";
+import { useTranslation } from "react-i18next";
+
 const HomeScreen = () => {
   const { IS_RTL, isMobileView } = useContext(AppStateContext);
-  const { packageData, loading, setLoading } = useContext(PackageContext);
+  const {
+    packageData,
+    loading,
+    setLoading,
+    errorFlag,
+    setErrorFlag,
+    errorMessage,
+  } = useContext(PackageContext);
+  const { t } = useTranslation();
   const classes = makeStyles({ IS_RTL });
+
   return (
     <div className={classes.container}>
       <Header />
@@ -44,6 +56,11 @@ const HomeScreen = () => {
       >
         <CircularProgress color="inherit" />
       </Backdrop>
+      <Snackbar
+        open={errorFlag}
+        onClose={() => setErrorFlag(false)}
+        message={t(`${errorMessage}`)}
+      ></Snackbar>
     </div>
   );
 };

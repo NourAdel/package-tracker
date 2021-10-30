@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family:'Cairo black' ;
+  src: local('Cairo'), url('./assets/fonts/Cairo-Black.ttf');
+}
+
+
+@font-face {
+  font-family:'Cairo bold' ;
+  src: local('Cairo'), url('./assets/fonts/Cairo-Bold.ttf');
+}
+
+@font-face {
+  font-family:'Cairo extra light' ;
+  src: local('Cairo'), url('./assets/fonts/Cairo-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family:'Cairo  light' ;
+  src: local('Cairo'), url('./assets/fonts/Cairo-Light.ttf');
+}
+
+@font-face {
+  font-family:'Cairo regular' ;
+  src: local('Cairo'), url('./assets/fonts/Cairo-Regular.ttf');
+}
+
+@font-face {
+  font-family:'Cairo semi bold' ;
+  src: local('Cairo'), url('./assets/fonts/Cairo-SemiBold.ttf');
+}

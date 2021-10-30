@@ -1,8 +1,8 @@
 import makeStyles from "./Style";
 import { useContext } from "react";
 import { AppStateContext } from "../../Context/AppStateContext";
-import { ReactComponent as LogoAr } from "../../assets/Logo.svg";
-import { ReactComponent as LogoEn } from "../../assets/LogoEn.svg";
+import { ReactComponent as LogoAr } from "../../assets/Imgs/Logo.svg";
+import { ReactComponent as LogoEn } from "../../assets/Imgs/LogoEn.svg";
 
 const SearchBox = () => {
   const { IS_RTL, setLanguage, appLanguage } = useContext(AppStateContext);

@@ -69,6 +69,20 @@ const ProgressBar = () => {
     t("DELIVERED"),
   ];
 
+  const activeStep = () => {
+    switch (packageData.CurrentStatus.state) {
+      case "TICKET_CREATED":
+        return 0;
+      case "PACKAGE_RECEIVED":
+        return 1;
+      case "DELIVERED":
+        return 4;
+      default:
+        return 2;
+        break;
+    }
+  };
+
   return (
     packageData && (
       <div
@@ -150,7 +164,7 @@ const ProgressBar = () => {
           dir={IS_RTL ? "rtl" : "ltr"}
         >
           <Stepper
-            activeStep={2}
+            activeStep={activeStep()}
             orientation={isMobileView ? "vertical" : "horizontal"}
           >
             {steps.map((label) => (

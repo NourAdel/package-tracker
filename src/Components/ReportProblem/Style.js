@@ -9,7 +9,6 @@ export default makeStyles(() => ({
     borderStyle: "solid",
     borderRadius: 10,
     display: "flex",
-    flexDirection: "column",
     justifyContent: "space-between",
     padding: 10,
     flexDirection: (props) => (props.IS_RTL ? "row" : "row-reverse"),

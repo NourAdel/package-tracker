@@ -72,7 +72,7 @@ const TableAssembler = () => {
             marginBottom: 25,
           }}
         >
-          <Table aria-label="customized table" stickyHeader>
+          <Table aria-label="customized table" >
             {TransitEvents.map((event) => {
               let timestamp = new Date(event.timestamp);
               const date = getDate(timestamp);
@@ -237,7 +237,7 @@ const TableAssembler = () => {
   return (
     packageData && (
       <div className={classes.container}>
-        <h4> {t("packageDetails")}</h4>
+        <h4 className={classes.title}> {t("packageDetails")}</h4>
         {isMobileView ? renderTableMobileView() : renderTable()}
       </div>
     )

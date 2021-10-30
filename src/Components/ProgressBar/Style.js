@@ -49,4 +49,7 @@ export default makeStyles(() => ({
     textAlign: "center",
     padding: 5,
   },
+  data:{
+      fontFamily:" Cairo regular"
+  }
 }));

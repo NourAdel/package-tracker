@@ -36,14 +36,14 @@ const ProgressBar = () => {
   };
 
   const getDateString = (promisedDate) => {
-    const date= new Date (promisedDate)
+    const date = new Date(promisedDate);
     const stringDate =
-    date.getUTCDate() +
-    "/" +
-    date.getUTCMonth() +
-    "/" +
-    date.getUTCFullYear();
-  return stringDate;
+      date.getUTCDate() +
+      "/" +
+      date.getUTCMonth() +
+      "/" +
+      date.getUTCFullYear();
+    return stringDate;
   };
 
   return (
@@ -54,20 +54,26 @@ const ProgressBar = () => {
             <h5 className={classes.dataLabel}>
               {t("packageNumber")} {packageData.TrackingNumber}
             </h5>{" "}
-            <h5>{t(`${packageData.CurrentStatus.state}`)}</h5>
+            <h5 className={classes.data}>
+              {t(`${packageData.CurrentStatus.state}`)}
+            </h5>
           </div>
           <div>
             <h5 className={classes.dataLabel}>{t("lastUpdate")}</h5>{" "}
-            <h5>{getDateString(packageData.CurrentStatus.timestamp)}</h5>
+            <h5 className={classes.data}>
+              {getDateString(packageData.CurrentStatus.timestamp)}
+            </h5>
           </div>
           <div>
             <h5 className={classes.dataLabel}>{t("shipper")}</h5>{" "}
-            <h5>Souq.com</h5>
+            <h5 className={classes.data}>Souq.com</h5>
           </div>
           {packageData.PromisedDate && (
             <div>
               <h5 className={classes.dataLabel}>{t("promisedDate")}</h5>{" "}
-              <h5>{getDateString(packageData.PromisedDate)}</h5>
+              <h5 className={classes.data}>
+                {getDateString(packageData.PromisedDate)}
+              </h5>
             </div>
           )}
         </div>

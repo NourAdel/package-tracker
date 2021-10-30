@@ -13,6 +13,7 @@ export default makeStyles(() => ({
   },
   title: {
     textAlign: (props) => (props.IS_RTL ? "right" : "left"),
+    fontFamily:'Cairo Bold'
   },
   description: {
     marginTop: 0,
@@ -20,6 +21,8 @@ export default makeStyles(() => ({
     fontWeight: 400,
     color: "#5e5e5e",
     textAlign: (props) => (props.IS_RTL ? "right" : "left"),
+    fontFamily:'Cairo regular'
+
   },
   input: {
     height: 35,
@@ -47,6 +50,8 @@ export default makeStyles(() => ({
     },
     "&::placeHolder": {
       color: "#979797A",
+      fontFamily:'Cairo regular'
+
     },
     "&::-webkit-inner-spin-button": {
       WebkitAppearance: "none",

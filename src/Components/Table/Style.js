@@ -13,4 +13,7 @@ export default makeStyles(() => ({
     borderWidth: 0.5,
     borderRadius: 10,
   },
+  title:{
+    fontFamily:" Cairo regular"
+}
 }));

@@ -3,7 +3,6 @@ import React, { createContext, useState } from "react";
 export const PackageContext = createContext();
 
 export const PackageProvider = ({ children }) => {
-
   const [searchInput, setSearchInput] = useState("");
   const [packageData, setPackageData] = useState(null);
   const setInput = (input) => {
@@ -22,10 +21,14 @@ export const PackageProvider = ({ children }) => {
         console.log(err);
       });
   };
+  const reset = () => {
+    setInput("");
+    setPackageData(null);
+  };
 
   return (
     <PackageContext.Provider
-      value={{ searchInput, setInput, getPackageData, packageData }}
+      value={{ searchInput, setInput, getPackageData, packageData, reset }}
     >
       {children}
     </PackageContext.Provider>

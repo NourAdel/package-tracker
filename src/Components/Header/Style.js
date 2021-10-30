@@ -19,6 +19,7 @@ export default makeStyles(() => ({
   logo: {
     width: 88,
     height: 40,
+    cursor:"pointer"
   },
   language: {
     fontSize: 20,

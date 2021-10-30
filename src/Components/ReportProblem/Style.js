@@ -2,8 +2,8 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles(() => ({
   container: {
-    width: "15%",
-    minWidth: 250,
+    width: "80%",
+    minWidth: 220,
     borderColor: "#e3e3e3",
     borderWidth: 1,
     borderStyle: "solid",
@@ -12,22 +12,31 @@ export default makeStyles(() => ({
     flexDirection: "column",
     justifyContent: "space-between",
     padding: 10,
+    flexDirection: (props) => (props.IS_RTL ? "row" : "row-reverse"),
+    boxSizing: "border-box",
+    marginTop:10,
+    "@media (max-width: 730px)": {
+      width:350
+
+     }
   },
   innerContainer: {
     display: "flex",
-    flexDirection: (props) => (props.IS_RTL ? "row" : "row-reverse"),
+    flexDirection: "column",
     alignItems: "center",
   },
   title: {
     fontFamily: "Cairo bold",
     fontSize: 16,
+    width: "100%",
+    textAlign: (props) => (props.IS_RTL ? "right" : "left"),
   },
   button: {
     backgroundColor: "#ff0000",
     height: 30,
     color: "white",
     display: "flex",
-    width: "75%",
+    width: "100%",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 10,
@@ -50,4 +59,5 @@ export default makeStyles(() => ({
 export const ContactSupportIconStyle = {
   color: "#ff0000",
   fontSize: 70,
+  marginTop:2
 };

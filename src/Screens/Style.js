@@ -8,24 +8,29 @@ export default makeStyles(() => ({
     height: "100%",
   },
   bodyContainer: {
-    width: "100%",
+    width: "95%",
     display: "flex",
     flexDirection: (props) => (props.IS_RTL ? "row-reverse" : "row"),
-    alignItems: "flex-end",
-    paddingLeft: (props) => (props.IS_RTL ? 0 : "5%"),
-    paddingRight: (props) => (props.IS_RTL ? "5%" : 0),
-    alignItems: "center",
     marginTop: 20,
+    marginBottom: 20,
     alignSelf: "center",
     "@media (max-width: 730px)": {
       display: "flex",
       flexDirection: "column",
       padding: 0,
       marginTop: 0,
+      marginBottom: 0,
+
     },
     "@media (max-width: 900px) and(min-width: 730px) ": {
       paddingLeft: 5,
       paddingRight: 5,
     },
+  },
+  addressContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginTop: 70,
   },
 }));

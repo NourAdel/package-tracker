@@ -14,8 +14,10 @@ const AR = {
   promisedDate: "موعد التسليم خلال",
   reportProblemTitle: "هل يوجد مشكلة في شحنتك؟",
   reportProblemBTN: "إبلاغ عن مشكلة",
+  addressTitle: "العنوان",
   address:
     "إمبابة شارع طلعت حرب مدينةالعمال بجوارالبرنس منرل ١٧ بلوك ٣٣,الفاهرة.",
+  packageDetails: "تفاصيل الشحنة",
 
   //Activities
 

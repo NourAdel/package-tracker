@@ -2,25 +2,24 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles(() => ({
   container: {
-    width: (props) => (props.WITH_DATA ? "35%" : 350),
-    maxWidth: 350,
+    width: 350,
     height: 170,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "#fafafa",
-    margin: "auto",
+    backgroundColor: props=>props.WITH_DATA? "transparent":"#fafafa",
+    // margin: "auto",
     padding: 20,
     boxSizing: "border-box",
-    "@media (max-width: 730px)": {
-      width: (props) => (props.WITH_DATA ? "100%" : 350),
-      maxWidth: "unset",
-      position: (props) => (props.WITH_DATA ? "absolute" : "unset"),
-      bottom:0
-      ,
-      zIndex:3
-      //  (props) => (props.WITH_DATA ? 0 : "unset"),
-    },
+    // "@media (max-width: 730px)": {
+    //   width: (props) => (props.WITH_DATA ? "100%" : 350),
+    //   maxWidth: "unset",
+    //   position: (props) => (props.WITH_DATA ? "absolute" : "unset"),
+    //   bottom:0
+    //   ,
+    //   zIndex:3
+    //   //  (props) => (props.WITH_DATA ? 0 : "unset"),
+    // },
   },
   title: {
     textAlign: (props) => (props.IS_RTL ? "right" : "left"),

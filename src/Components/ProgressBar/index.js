@@ -88,7 +88,7 @@ const ProgressBar = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          borderColor: "grey",
+          borderColor: "#e3e3e3",
           borderStyle: "solid",
           borderWidth: isMobileView ? 0 : 0.3,
           borderRadius: 10,
@@ -107,7 +107,7 @@ const ProgressBar = () => {
             display: "flex",
             flexDirection: IS_RTL ? "row-reverse" : "row",
             justifyContent: isMobileView ? "space-between" : "space-around",
-            borderColor: "grey",
+            borderColor: "#e3e3e3",
             borderStyle: "solid",
             borderWidth: 0.3,
             width: "95%",

@@ -215,7 +215,7 @@ const TableAssembler = () => {
         <TableContainer
           className={classes.tableContainer}
           sx={{
-            width: "50%",
+            width: "100%",
           }}
         >
           <Table aria-label="customized table" stickyHeader>
@@ -227,7 +227,14 @@ const TableAssembler = () => {
     );
   };
 
-  return isMobileView ? renderTableMobileView() : renderTable();
+  return (
+    packageData && (
+      <div style={{ width: "100%", textAlign: IS_RTL ? "right" : "left" }}>
+        <h4> {t("packageDetails")}</h4>
+        {isMobileView ? renderTableMobileView() : renderTable()}
+      </div>
+    )
+  );
 };
 
 export default TableAssembler;
